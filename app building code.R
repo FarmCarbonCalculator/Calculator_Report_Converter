@@ -2,7 +2,7 @@ library(shiny)
 library(jsonlite)
 library(dplyr)
 library(readr)
-install.packages(DT)
+install.packages("DT")
 library(DT)
 install.packages("rsconnect")
 rsconnect::setAccountInfo(name='calumfct',
@@ -215,4 +215,4 @@ server <- function(input, output) {
 
 shinyApp(ui = ui, server = server)
 
-
+rsconnect::deployApp(appName = "Calculator_Report_Converter", appDir = "C:/Users/calum/Desktop/Calculator Report Converter")
